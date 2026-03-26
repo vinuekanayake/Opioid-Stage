@@ -1,0 +1,23 @@
+seed: 42
+val_split: 0.1
+weight_decay: 0.01
+save_total_limit: 2
+logging_steps: 50
+metric_for_best_model: "accuracy"
+
+# ICL-specific settings
+use_icl_data: true
+icl_data_path: "data/icl_relabeled/combined/train_icl_relabeled.csv"
+
+# Test set filtering
+# Note: All 40 ICL examples come from expert data only
+# Worker test sets are unchanged, only expert test sets are filtered
+use_filtered_expert_only: true
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

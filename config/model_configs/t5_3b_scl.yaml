@@ -1,0 +1,21 @@
+model_name: "t5-3b"
+model_type: "encoder-decoder"
+projection_dim: 256
+temperature: 0.07
+max_length: 256
+
+pretrain:
+  batch_size_per_class: 2
+  n_classes_per_batch: 6
+  learning_rate: 2e-5
+  epochs: 50
+  gradient_accumulation_steps: 8
+  weight_decay: 0.0
+
+finetune:
+  batch_size: 1
+  learning_rate: 1e-4
+  epochs: 5
+  gradient_accumulation_steps: 8
+  freeze_layers: 4  # Freeze all but last 4 encoder blocks
+  weight_decay: 0.01

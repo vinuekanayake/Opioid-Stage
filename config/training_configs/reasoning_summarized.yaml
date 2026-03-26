@@ -1,0 +1,23 @@
+seed: 42
+val_split: 0.1
+weight_decay: 0.001
+save_total_limit: 2
+logging_steps: 50
+metric_for_best_model: "accuracy"
+
+reasoning_type: "summarized"  # or "step_by_step"
+reasoning_column: "reasoning"  # Column name in CSV
+max_generation_length: 512
+
+# Prompt templates
+train_prompt: "classify: the following post and explain your reasoning: {text}"
+test_prompt: "classify: the following post and explain your reasoning: {text}"
+target_format: "{label}. Reasoning: {reasoning}"
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

@@ -1,0 +1,31 @@
+# API settings
+api:
+  model: "gpt-5"  # or "gpt-5.2"
+  temperature: 1  # Deterministic
+  max_tokens: 16
+  rate_limit_delay: 0.5  # seconds between requests
+
+# Data paths (relative to project root)
+data:
+  worker_eval_wo: "data/worker_data/eval_wo_explanation.csv"
+  worker_eval_w: "data/worker_data/eval_w_explanation.csv"
+  expert_eval_wo: "data/expert_data/eval_wo_explanation_filtered.csv"
+  expert_eval_w: "data/expert_data/eval_w_explanation_filtered.csv"
+  output_dir: "data/zeroshot_results"
+
+# Class descriptions
+class_descriptions: |
+  - Medical Use: Use of prescription opioids prescribed by a medical professional for a medical condition.
+  - Misuse: Use of a substance not following medical indications or prescribed dosing. Includes nontherapeutic use (e.g., euphoria, sedation). Misuse not restricted to prescription opioids.
+  - Addiction: Compulsive opioid use despite harm or negative consequences. Includes impaired control, craving, dependence, withdrawal.
+  - Recovery: Process of change where individuals stop using opioids, improve health and wellness, and live without opioids.
+  - Relapse: Return to opioid use after an attempt to quit.
+  - Not Using: Posts about substances other than opioids (e.g., marijuana), about another person's use, general questions about opioids without evidence of personal use, or irrelevant info.
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

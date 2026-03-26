@@ -1,0 +1,29 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Config with secrets 
+config/config.yaml
+
+# Output directories
+data/
+.DS_Store
+pymetamap-master/
+
+
+# Python
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# venv
+.venv/

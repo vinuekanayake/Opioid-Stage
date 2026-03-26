@@ -1,0 +1,14 @@
+seed: 42
+val_split: 0.1
+weight_decay: 0.01
+save_total_limit: 2
+logging_steps: 50
+metric_for_best_model: "accuracy"
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

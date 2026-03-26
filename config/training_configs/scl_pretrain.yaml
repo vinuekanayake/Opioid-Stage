@@ -1,0 +1,26 @@
+seed: 42
+save_total_limit: 5
+logging_steps: 10
+epoch_save_interval: 1  # Save every N epochs
+
+# Augmentation settings
+augmentations:
+  - synonym_replacement
+  - random_deletion
+  - random_swap
+  
+augmentation_params:
+  synonym_replacement:
+    n: 2
+  random_deletion:
+    p: 0.1
+  random_swap:
+    n: 1
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

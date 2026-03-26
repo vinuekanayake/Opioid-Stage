@@ -1,0 +1,22 @@
+model_name: "microsoft/deberta-v3-base"
+model_type: "encoder"
+projection_dim: 256
+temperature: 0.07
+max_length: 256
+
+# Pretraining settings
+pretrain:
+  batch_size_per_class: 2
+  n_classes_per_batch: 6
+  learning_rate: 3e-5
+  epochs: 50
+  gradient_accumulation_steps: 8
+  weight_decay: 0.0
+  
+# Fine-tuning settings
+finetune:
+  batch_size: 8
+  learning_rate: 2e-5
+  epochs: 10
+  freeze_layers: 6  # Freeze first 6 encoder layers
+  freeze_embeddings: true

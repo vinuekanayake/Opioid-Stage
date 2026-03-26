@@ -1,0 +1,20 @@
+data:
+  worker_train_w_explanation: "data/worker_data/train_w_explanation.csv"
+  worker_train_wo_explanation: "data/worker_data/train_wo_explanation.csv"
+  worker_eval_w_explanation: "data/worker_data/eval_w_explanation.csv"
+  worker_eval_wo_explanation: "data/worker_data/eval_wo_explanation.csv"
+  expert_eval_w_explanation: "data/expert_data/eval_w_explanation.csv"
+  expert_eval_wo_explanation: "data/expert_data/eval_wo_explanation.csv"
+
+  # Filtered test data (ICL examples removed)  
+  expert_eval_w_explanation_filtered: "data/expert_data/eval_w_explanation_filtered.csv"  
+  expert_eval_wo_explanation_filtered: "data/expert_data/eval_wo_explanation_filtered.csv"
+
+
+output:
+  checkpoints: "results/checkpoints"
+  predictions: "results/predictions"
+  logs: "results/logs"
+
+cache:
+  hf_cache: "/hf_cache/models" 

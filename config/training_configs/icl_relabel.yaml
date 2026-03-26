@@ -1,0 +1,42 @@
+seed: 42
+
+# API settings
+api:
+  model: "gpt-5"
+  temperature: 1  # Deterministic for consistency
+  max_tokens: 500
+  
+# ICL settings
+icl:
+  num_sets: 10
+  examples_per_set: 6
+  
+# Paths
+data:
+  train_path: "data/worker_data/train_wo_explanation.csv"
+  icl_sets_dir: "data/icl_sets"
+  output_dir: "data/icl_relabeled/individual_sets"
+
+# Annotation guidelines
+guidelines: |
+  Annotation Guidelines
+  
+  - Medical Use: Use of prescription opioids prescribed by a medical professional for a medical condition.
+  - Misuse: Use of a substance not following medical indications or prescribed dosing. Includes nontherapeutic use (e.g., euphoria, sedation). Misuse not restricted to prescription opioids.
+  - Addiction: Compulsive opioid use despite harm or negative consequences. Includes impaired control, craving, dependence, withdrawal.
+  - Recovery: Process of change where individuals stop using opioids, improve health and wellness, and live without opioids.
+  - Relapse: Return to opioid use after an attempt to quit.
+  - Not Using: Posts about substances other than opioids (e.g., marijuana), about another person's use, general questions about opioids without evidence of personal use, or irrelevant info.
+  
+  Rules:
+  1. Output must be in JSON format: {label: <one of [Medical Use, Misuse, Addiction, Recovery, Relapse, Not Using]>, rationale: <exact span(s) of text from the Reddit post that justify the label>}
+  2. Rationale must be verbatim from the post (no paraphrasing).
+  3. Use the minimum sufficient span that clearly justifies the label.
+
+labels:
+  - "Medical Use"
+  - "Misuse"
+  - "Addiction"
+  - "Recovery"
+  - "Relapse"
+  - "Not Using"

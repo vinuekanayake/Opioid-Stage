@@ -1,0 +1,10 @@
+model_name: "t5-11b"
+model_type: "encoder-decoder"
+batch_size: 1
+learning_rate: 5e-5
+epochs: 5
+max_length: 512
+gradient_accumulation_steps: 8
+prefix: "classify:"
+use_bf16: true
+use_gradient_checkpointing: true
