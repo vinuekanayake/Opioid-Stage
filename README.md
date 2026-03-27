@@ -1,6 +1,6 @@
 # Opioid Use Stage Classification Framework
 
-This repository implements a multi-faceted framework for fine-grained classification on Reddit data into six stages of the opioid use stage continuum:
+This repository implements a multi-faceted framework for fine-grained classification on Reddit data into six stages of the opioid use stage continum:
 
 1. **Medical Use**  
 2. **Misuse**  
