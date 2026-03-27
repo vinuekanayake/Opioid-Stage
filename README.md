@@ -169,7 +169,7 @@ Zero-shot evaluation: GPT‑5 predicts labels directly on test posts without any
 #### GPT‑5 ICL Relabeling 
 
 ```bash
-python scripts/zeroshot_gpt5.py \
+python zeroshot_gpt5.py \
   --dataset worker \
   --data_type wo \
   --api_key $OPENAI_API_KEY \
@@ -178,6 +178,11 @@ python scripts/zeroshot_gpt5.py \
 
 Where:
 - `--dataset`: `worker`, or `expert`
+- Optionally (`--save_errors`) saves all misclassified examples to an errors CSV.
+Flags:
+- `--resume`: resume from existing predictions (skips already classified rows).
+- `--overwrite`: overwrite existing CSV and start from scratch.
+
 
 
 
