@@ -23,7 +23,7 @@ The project supports multiple modeling strategies:
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/vinuekanayake/OUD_Stage_Classification/
+git clone https://github.com/vinuekanayake/Opioid-Stage
 cd OUD_Stage_Classification
 ```
 
